@@ -144,7 +144,7 @@ def menuItemJSON(group_ids):
 
 
 
-# (get) get all the groups , (post)add new group
+# (GET) get all the groups , (POST)add new group
 @app.route('/groups', methods=['GET', 'POST'])
 def all_books():
     DBSession = sessionmaker(bind=engine)
@@ -184,7 +184,7 @@ def all_books():
 
 
 
-# (put) edit a specific member, (delete) delete a specific member and updeat the rest fo the group automatic
+# (PUT) edit a specific member, (DELETE) delete a specific member and updeat the rest fo the group automatic
 @app.route('/group/<member_ids>/member', methods=['PUT', 'DELETE'])
 def updet_member(member_ids):
     DBSession = sessionmaker(bind=engine)
